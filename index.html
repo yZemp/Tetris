@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris</title>
+  <link rel="stylesheet" href="tetrisStyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"> 
+</head>
+<body>
+  <header>
+    <h1>Tetris</h1>
+    <h3>How to play</h3>
+    <h3>Curiosity</h3>
+    <h3>About me</h3>
+  </header>
+  <section id="section1">
+    <div id="stuff-left" class="game-stuff">
+      <div id="score" class="stuff-left">
+        <h5>SCORE</h5>
+        <span>0</span>
+      </div>
+      <div id="score" class="stuff-left">
+        <h5>HIGH SCORE</h5>
+        <span>0</span>
+      </div>
+      <div id="score" class="stuff-left">
+        <h5>MUSIC</h5>
+        <div id="select-wrapper">
+          <select name="music-select" id="music-select">
+            <option value="music-original">Original</option>
+            <option value="music-remix">Remix</option>
+            <option value="music-dude-wtf">Dude wtf</option>
+            <option value="music-none">None</option>
+          </select>
+      </div>
+      </div>
+    </div>
+    <canvas class="game-stuff" id="game-panel"></canvas>
+    <div id="stuff-right" class="game-stuff">
+      <canvas id="preview"></canvas>
+      <div id="arrows">
+        <img src="tetrisMedia/up.png" id="up-arrow" alt="up arrow">
+        <img src="tetrisMedia/left.png" id="left-arrow" alt="left arrow">
+        <img src="tetrisMedia/down.png" id="down-arrow" alt="down arrow">
+        <img src="tetrisMedia/right.png" id="right-arrow" alt="right arrow">
+      </div>
+    </div>
+  </section>
+  <section id="section2"></section>
+  <section id="section3"></section>
+  <section id="section4"></section>
+  <footer>
+    <div id="left">
+      <h6>Feedbacks, critiques, or just wanna contact me?</h6>
+      <div>
+        <span>Email:</span>
+        <span>Maurizio.3rrico@gmail.com</span>
+      </div>
+      <div>
+        <span>Instagram:</span>
+        <span>yZemp</span>
+      </div>
+    </div>
+    <div id="right">
+      <h6>Many Thanks to:</h6>
+      <span>Ancora da scrivere :)</span>
+    </div>
+  </footer>
+
+  <script src="tetrisLogic.js"></script>
+</body>
+</html>

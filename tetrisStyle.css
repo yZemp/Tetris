@@ -1,0 +1,221 @@
+:root {
+  --purple: #48314B;
+  --lightpurle: #767AC1;
+  --lightblue: #D0EFF7;
+  --blue: #283A94;
+  --yellow: #E5B436;
+  --dark: #242036;
+}
+
+/****************** MAIN ***********************/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  min-height: 100%;
+}
+
+header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: min(15vh, 10vw);
+  background: var(--purple);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--lightpurle);
+  font-size: 3vh;
+  z-index: 10;
+}
+
+h1 {
+  color: var(--yellow);
+  font-size: 6vh;
+}
+
+/****************** FOOTER ***********************/
+
+footer {
+  background: var(--purple);
+  color: var(--lightblue);
+  position: absolute;
+  top: 400vh;
+  left: 0;
+  right: 0;
+  height: 40vh;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer * {
+  margin: .5vw;
+  margin-top: 1vw;
+}
+
+footer div {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+footer div div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer div span {
+  font-size: .6em;
+  font-weight: 200;
+}
+
+/****************** SECTIONS ***********************/
+
+section {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 1;
+}
+
+#section1 {
+  background: var(--lightblue);
+  color: var(--purple);
+  top: 0;
+  height: 100vh;
+}
+
+#section2 {
+  background: var(--blue);
+  color: var(--lightblue);
+  top: 100vh;
+}
+
+#section3 {
+  background: var(--yellow);
+  color: var(--blue);
+  top: 200vh;
+}
+
+#section4 {
+  background: var(--lightblue);
+  color: var(--blue);
+  top: 300vh;
+}
+
+/**************** GAME SECTION *********************/
+
+.game-stuff {
+  margin-top: min(20vh, 15vw);
+}
+
+#section1 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.game-stuff {
+  height: 70vh;
+}
+
+canvas {
+  background: var(--dark);
+  border: solid 8px var(--purple);
+}
+
+#stuff-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#stuff-left div {
+  margin: 0px auto;
+}
+
+#stuff-left div h5 {
+  font-size: 2.5rem;
+}
+
+#stuff-left div span {
+  display: block;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+select {
+  background: transparent;
+  border: none;
+  color: var(--purple);
+  font-size: 1.5rem;
+  appearance: none;
+}
+
+#select-wrapper::after {
+  content: "";
+  display: inline-block;
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent; 
+  border-top:20px solid var(--purple);
+}
+
+#game-panel {
+  width: 40vw;
+}
+
+#stuff-right {
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#stuff-right canvas {
+  width: 12vw;
+  height: 15vw;
+  margin: 0px auto;
+}
+
+/**************** ARROWS STUFF *********************/
+
+#arrows {
+  display: grid;
+  grid-gap: 10px;
+  margin: 0px auto;
+}
+
+.game-stuff img {
+  width: 5vw;
+  height: 5vw;
+}
+
+#up-arrow {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+#left-arrow {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+#down-arrow {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+#right-arrow {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
