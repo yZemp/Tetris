@@ -5,9 +5,17 @@
   --blue: #283A94;
   --yellow: #E5B436;
   --dark: #242036;
+
+  --demo1dim: 30vw;
+  --demo2dim: 30vw;
+  --demo3dim: 40vw;
 }
 
 /****************** MAIN ***********************/
+
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   margin: 0px;
@@ -34,9 +42,18 @@ header {
   z-index: 10;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 h1 {
   color: var(--yellow);
   font-size: 6vh;
+}
+
+h3 {
+  cursor: pointer;
 }
 
 /****************** FOOTER ***********************/
@@ -48,10 +65,11 @@ footer {
   top: 400vh;
   left: 0;
   right: 0;
-  height: 40vh;
+  height: 50vh;
   z-index: 1;
   display: flex;
   justify-content: space-around;
+  padding-top: 5vh;
 }
 
 footer * {
@@ -158,6 +176,11 @@ select {
   color: var(--purple);
   font-size: 1.5rem;
   appearance: none;
+  -webkit-appearance: none;
+}
+
+select:focus {
+  outline: none;
 }
 
 #select-wrapper::after {
@@ -167,7 +190,12 @@ select {
   height: 0; 
   border-left: 10px solid transparent;
   border-right: 10px solid transparent; 
-  border-top:20px solid var(--purple);
+  border-top: 20px solid transparent;
+  transition: transform 500ms ease;
+}
+
+#select-wrapper:hover#select-wrapper::after {
+  border-top: 20px solid var(--purple);
 }
 
 #game-panel {
@@ -218,4 +246,56 @@ select {
 #right-arrow {
   grid-column-start: 3;
   grid-column-end: 4;
+}
+
+/****************** DECO **********************/
+
+.deco {
+  display: inline-block;
+
+  /* border: dotted 2px yellow; */
+}
+
+.deco-item {
+  background: var(--lightpurle);
+  position: relative;
+  border-radius: 50%;
+}
+
+.deco-item1 {
+  height: var(--demo1dim);
+  width: var(--demo1dim);
+}
+
+.deco-item2 {
+  height: var(--demo2dim);
+  width: var(--demo2dim);
+}
+
+.deco-item3 {
+  height: var(--demo3dim);
+  width: var(--demo3dim);
+}
+
+/**************** DECO-LEFT ********************/
+
+.deco-left .deco-item1 {
+  top: -12vw;
+  left: -11vw;
+}
+
+.deco-left .deco-item2 {
+  top: -19vw;
+  left: -19vw;
+}
+
+.deco-left .deco-item3 {
+  top: -26vw;
+  left: -12vw;
+}
+
+/****************** TEXT **********************/
+
+section {
+  display: flex;
 }

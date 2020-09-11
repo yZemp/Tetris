@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tetris</title>
   <link rel="stylesheet" href="tetrisStyle.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"> 
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
   <header>
     <h1>Tetris</h1>
-    <h3>How to play</h3>
-    <h3>Curiosity</h3>
-    <h3>About me</h3>
+    <h3><a href="#section2">How to play</a></h3>
+    <h3><a href="#section3">Curiosity</a></h3>
+    <h3><a href="#section4">About me</a></h3>
   </header>
   <section id="section1">
     <div id="stuff-left" class="game-stuff">
@@ -33,7 +37,7 @@
             <option value="music-dude-wtf">Dude wtf</option>
             <option value="music-none">None</option>
           </select>
-      </div>
+        </div>
       </div>
     </div>
     <canvas class="game-stuff" id="game-panel"></canvas>
@@ -47,7 +51,25 @@
       </div>
     </div>
   </section>
-  <section id="section2"></section>
+  <section id="section2">
+    <div class="deco deco-left">
+      <div class="deco-item deco-item1"></div>
+      <div class="deco-item deco-item2"></div>
+      <div class="deco-item deco-item3"></div>
+    </div>
+    <div class="text">
+      <h4>How to play</h4>
+      <p>In tetris lo scopo del gioco è formare più
+        linee orizzontali possibili utilizzando i blocchi
+        che vengono generati all’alto del pannello di gioco
+        e che lentamente cadono.</p>
+      <p>Si possono spostare i blocchi a destra e
+        a sinistra premendo sulla tastiera, o sullo
+        schermo se giochi da telefono, le freccine
+        laterali (oppure ”a” e “d”) e ruotarli con la
+        freccina in alto (oppure “w”).</p>
+    </div>
+  </section>
   <section id="section3"></section>
   <section id="section4"></section>
   <footer>
@@ -61,6 +83,10 @@
         <span>Instagram:</span>
         <span>yZemp</span>
       </div>
+      <div>
+        <span>Discord:</span>
+        <span>yZemp#5460</span>
+      </div>
     </div>
     <div id="right">
       <h6>Many Thanks to:</h6>
@@ -70,4 +96,5 @@
 
   <script src="tetrisLogic.js"></script>
 </body>
+
 </html>
