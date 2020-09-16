@@ -42,12 +42,15 @@
     </div>
     <canvas class="game-stuff" id="game-panel"></canvas>
     <div id="stuff-right" class="game-stuff">
-      <canvas id="preview"></canvas>
+      <div id="canvas-wrapper">
+        <div id="canvas-title">Next:</div>
+        <canvas id="preview"></canvas>
+      </div>
       <div id="arrows">
-        <img src="tetrisMedia/up.png" id="up-arrow" alt="up arrow">
-        <img src="tetrisMedia/left.png" id="left-arrow" alt="left arrow">
-        <img src="tetrisMedia/down.png" id="down-arrow" alt="down arrow">
-        <img src="tetrisMedia/right.png" id="right-arrow" alt="right arrow">
+        <img src="tetrisMedia/up.png" onclick="arrowClick(0)" id="up-arrow" alt="up arrow">
+        <img src="tetrisMedia/left.png" onclick="arrowClick(1)" id="left-arrow" alt="left arrow">
+        <img src="tetrisMedia/down.png" onclick="arrowClick(2)" id="down-arrow" alt="down arrow">
+        <img src="tetrisMedia/right.png" onclick="arrowClick(3)" id="right-arrow" alt="right arrow">
       </div>
     </div>
   </section>
@@ -57,21 +60,94 @@
       <div class="deco-item deco-item2"></div>
       <div class="deco-item deco-item3"></div>
     </div>
-    <div class="text">
-      <h4>How to play</h4>
+    <div class="text text-right">
+      <div>
+        <h4>How to play</h4>
+        <button class="button" onclick="backOnTop()">Back on top</button>
+      </div>
       <p>In tetris lo scopo del gioco è formare più
         linee orizzontali possibili utilizzando i blocchi
         che vengono generati all’alto del pannello di gioco
-        e che lentamente cadono.</p>
+        e che lentamente cadono andando a incastrarsi con i
+        blocchi caduti in precedenza.
+      </p>
+      <br>
       <p>Si possono spostare i blocchi a destra e
         a sinistra premendo sulla tastiera, o sullo
         schermo se giochi da telefono, le freccine
         laterali (oppure ”a” e “d”) e ruotarli con la
-        freccina in alto (oppure “w”).</p>
+        freccina in alto (oppure “w”).
+      </p>
+      <br>
+      <p>Guadagni punti a ogni linea che elimini, e fai molti
+        punti se realizzi una combo, ovvero l'eliminazione di piú
+        linee allo stesso tempo.
+      </p>
+      <br>
+      <p>Pro tip: cerca di non lasciare buchi da nessuna parte
+        per fare in modo che la pila dei blocchi non salga troppo.
+        Se arriva in cima avrai perso.
+      </p>
     </div>
   </section>
-  <section id="section3"></section>
-  <section id="section4"></section>
+  <section id="section3">
+    <div class="deco deco-right">
+      <div class="deco-item deco-item1"></div>
+      <div class="deco-item deco-item2"></div>
+      <div class="deco-item deco-item3"></div>
+    </div>
+    <div class="text text-left">
+      <div>
+        <h4>Curiosity</h4>
+        <button class="button" onclick="backOnTop()">Back on top</button>
+      </div>
+      <p>Aleksej Pažitnov, inventore del Tetris, per ben dieci anni
+        non ricevette proventi per l’invenzione del geniale gioco.
+        I soldi andarono infatti a finire nel budget statale e sul
+        conto di una compagnia americana.
+      </p>
+      <br>
+      <p>
+        Nel 2007 Tetris è stato nominato il secondo miglior gioco di
+        tutti i tempi. A conquistare il primo posto in classifica fu
+        Super Mario Bros, l’idraulico con i baffi più famoso dei
+        videogiochi.
+      </p>
+      <br>
+      <p>
+        Nel 2016 alcuni studenti tedeschi hanno riprodotto il gioco del
+        Tetris sulla facciata di un edificio. Per farlo, hanno adoperato
+        57.000 luci a LED posizionate su 392 finestre e lavorato per
+        cinquemila ore. Il <a href="https://www.youtube.com/watch?v=0atY4mboD4w"
+          target="_blank"><span>risultato</span></a> è stato a dir poco straordinario.
+      </p>
+    </div>
+  </section>
+  <section id="section4">
+    <div class="deco deco-left">
+      <div class="deco-item deco-item1"></div>
+      <div class="deco-item deco-item2"></div>
+      <div class="deco-item deco-item3"></div>
+    </div>
+    <div class="text text-right">
+      <div>
+        <h4>About</h4>
+        <button class="button" onclick="backOnTop()">Back on top</button>
+      </div>
+      <p>Sono un ragazzo di 17 anni che studia allo scientifico che crea
+        siti web per divertimento e per imparare la programmazione.
+        <br>
+        Ho ricreato Tetris per affinare le mie abilità sia come javascript
+        developer che come UI designer, ponendo particolare cura nella grafica del sito.
+      </p>
+      <br>
+      <p>
+        Mi piacerebbe imparare nuove cose e fare nuovi esperimenti. Non esitare
+        a contattarmi se vuoi propormi progetti o collab :)
+      </p>
+    </div>
+  </section>
+
   <footer>
     <div id="left">
       <h6>Feedbacks, critiques, or just wanna contact me?</h6>

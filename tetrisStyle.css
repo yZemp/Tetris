@@ -62,7 +62,7 @@ footer {
   background: var(--purple);
   color: var(--lightblue);
   position: absolute;
-  top: 400vh;
+  top: 420vh;
   left: 0;
   right: 0;
   height: 50vh;
@@ -100,7 +100,7 @@ section {
   position: absolute;
   left: 0;
   right: 0;
-  height: 100vh;
+  height: 105vh;
   z-index: 1;
 }
 
@@ -108,25 +108,24 @@ section {
   background: var(--lightblue);
   color: var(--purple);
   top: 0;
-  height: 100vh;
 }
 
 #section2 {
   background: var(--blue);
   color: var(--lightblue);
-  top: 100vh;
+  top: 105vh;
 }
 
 #section3 {
   background: var(--yellow);
   color: var(--blue);
-  top: 200vh;
+  top: 210vh;
 }
 
 #section4 {
   background: var(--lightblue);
   color: var(--blue);
-  top: 300vh;
+  top: 315vh;
 }
 
 /**************** GAME SECTION *********************/
@@ -139,6 +138,7 @@ section {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  z-index: 5;
 }
 
 .game-stuff {
@@ -179,6 +179,10 @@ select {
   -webkit-appearance: none;
 }
 
+select:hover {
+  cursor: pointer;
+}
+
 select:focus {
   outline: none;
 }
@@ -206,13 +210,27 @@ select:focus {
   width: 20vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-#stuff-right canvas {
-  width: 12vw;
-  height: 15vw;
-  margin: 0px auto;
+#canvas-wrapper {
+  width: 100%;
+}
+
+#canvas-title {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  width: 30%;
+  margin: auto;
+  margin-bottom: 1vh;
+}
+
+#canvas-wrapper canvas {
+  display: block;
+  width: 15vw;
+  height: 23vh;
+  margin: auto;
 }
 
 /**************** ARROWS STUFF *********************/
@@ -226,6 +244,7 @@ select:focus {
 .game-stuff img {
   width: 5vw;
   height: 5vw;
+  cursor: pointer;
 }
 
 #up-arrow {
@@ -252,14 +271,15 @@ select:focus {
 
 .deco {
   display: inline-block;
-
-  /* border: dotted 2px yellow; */
+  max-width: 40%;
+  overflow: hidden;
 }
 
 .deco-item {
   background: var(--lightpurle);
   position: relative;
   border-radius: 50%;
+  clip-path: fill-box;
 }
 
 .deco-item1 {
@@ -294,8 +314,171 @@ select:focus {
   left: -12vw;
 }
 
+/**************** DECO-RIGHT ********************/
+
+.deco-right {
+  order: 2;
+}
+
+.deco-right .deco-item1 {
+  top: -12vw;
+  right: -11vw;
+}
+
+.deco-right .deco-item2 {
+  top: -19vw;
+  right: -23vw;
+}
+
+.deco-right .deco-item3 {
+  top: -26vw;
+  right: -12vw;
+}
+
+/**************** BUTTONS *********************/
+
+.button {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 1vw;
+  font-size: 2rem;
+  font-weight: 300;
+
+  position: relative;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:hover.button::after {
+  animation: button-animation 1500ms infinite;
+}
+
+@keyframes button-animation {
+  0% {
+    opacity: 70%;
+    transform: scale(1, 1);
+  }
+  60% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 0%;
+    transform: scale(1.06, 1.2);
+  }
+}
+
+@-moz-keyframes button-animation {
+  0% {
+    opacity: 70%;
+    transform: scale(1, 1);
+  }
+  60% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 0%;
+    transform: scale(1.06, 1.2);
+  }
+}
+
+@-webkit-keyframes button-animation {
+  0% {
+    opacity: 70%;
+    transform: scale(1, 1);
+  }
+  60% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 0%;
+    transform: scale(1.06, 1.2);
+  }
+}
+
+#section2 button {
+  background: var(--lightblue);
+  color: var(--blue);
+}
+
+#section2 button::after {
+  background: var(--lightblue);
+}
+
+#section3 button {
+  background: var(--blue);
+  color: var(--yellow);
+}
+
+#section3 button::after {
+  background: var(--blue);
+}
+
+#section4 button {
+  background: var(--blue);
+  color: var(--lightblue);
+}
+
+#section4 button::after {
+  background: var(--blue);
+}
+
 /****************** TEXT **********************/
 
 section {
   display: flex;
+  font-size: 1.6vw;
+}
+
+.text {
+  height: 80%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.text-right {
+  margin: auto 10vw auto 0px;
+}
+
+.text-left {
+  margin: auto 0px auto 10vw;
+}
+
+.text div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 9vh;
+}
+
+.text div h4 {
+  display: inline-block;
+  margin: auto 0px;
+  font-size: 3.5vw;
+}
+
+.text p a {
+  text-decoration: underline;
+}
+
+.text p a:hover {
+  text-decoration: none;
+}
+
+.text p a:visited {
+  text-decoration: none;
 }
